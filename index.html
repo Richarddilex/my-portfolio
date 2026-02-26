@@ -2,821 +2,489 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-    <title>Rica Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            background-color: black;
-            font-family: Arial, sans-serif;
-            padding: 120px 40px 40px 40px;
-            margin: 0;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
 
-        .logo {
-            position: fixed;
-            top: 0;
-            left: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgba(240, 240, 240, 0.15);
-            padding: 10px;
-            border-radius: 8px;
-            gap: 8px;
-        }
+    <meta name="description" content="Rica — Designer & Developer building digital experiences that drive results.">
+    <meta name="author" content="Richard Ngabo">
+    <meta name="keywords" content="Web Design, UI/UX, Web Development, Portfolio, Richard Ngabo, Rica">
 
-        .logo img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
 
-        .logo-text {
-            font-size: 16px;
-            font-weight: bold;
-            font-style: italic;
-            color: white;
-        }
+    <meta property="og:title" content="Rica | Designer & Developer">
+    <meta property="og:description" content="Building digital experiences that drive results.">
+    <meta property="og:image" content="./images/background.png">
+    <meta property="og:url" content="https://rica-dev.com">
+    <meta property="og:type" content="website">
 
-        .hero-container {
-            width: 80%;
-            max-width: 1000px;
-            height: 700px;
-            background-image: url('./images/background.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 10px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-            box-sizing: border-box;
-        }
 
-        .hero-container h1 {
-            font-size: 24px;
-            margin: 0 0 15px 0;
-            text-align: center;
-        }
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rica | Designer & Developer">
+    <meta name="twitter:description" content="Building digital experiences that drive results.">
+    <meta name="twitter:image" content="./images/background.png">
 
-        .hero-container h2 {
-            font-size: 48px;
-            margin: 0 0 20px 0;
-            text-align: center;
 
-        }
+    <link rel="icon" href="./images/MyLogo.svg" type="image/svg+xml">
 
-        .hero-container p {
-            margin: 0 0 30px 0;
-            text-align: center;
-            max-width: 600px;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
 
-        .button-container {
-            display: flex;
-            gap: 20px;
-        }
 
-        .button-container button {
-            padding: 12px 24px;
-            font-size: 16px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        .button-container button:hover {
-            opacity: 0.8;
-            transform: scale(1.1);
-        }
-
-        .btn-primary {
-            background: linear-gradient(to right, #B175FF, black);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: black;
-            color: white;
-        }
-
-        .btn-icon {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-
-        .second-section {
-            width: 100%;
-            max-width: 1200px;
-            margin: 200px auto;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .image-container {
-            flex: 1;
-            border: 2px solid transparent;
-            border-radius: 20px;
-            border-image: linear-gradient(to right, #B175FF, #FF8210) 1;
-            padding: 0px 10px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-container img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .vertical-line {
-            width: 2px;
-            height: 300px;
-            background: linear-gradient(to right, #B175FF, #FF8210);
-        }
-
-        .content-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .content-container span {
-            font-size: 32px;
-            color: white;
-        }
-
-        .content-container p {
-            color: white;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-
-         /* SECTION */
-        .works-section {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-
-        /* TITLE */
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-            margin-bottom: 80px;
-        }
-
-        .section-title .line {
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(to right, #B175FF, #FF8210);
-        }
-
-        .section-title h2 {
-            color: #ffffff;
-            font-size: 42px;
-            letter-spacing: 6px;
-            font-weight: 700;
-            margin: 0;
-            white-space: nowrap;
-            text-transform: uppercase;
-            position: relative;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(to right, #B175FF, #FF8210);
-            border-radius: 2px;
-        }
-
-        /* BELT SLIDER */
-        .slider-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 40px 0;
-        }
-
-        .slider-track {
-            display: flex;
-            gap: 24px;
-            animation: scroll 30s linear infinite;
-            width: fit-content;
-        }
-
-        .slider-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* PROJECT CARD */
-        .project-card {
-            width: 360px;
-            min-width: 360px;
-            background: rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-
-        /* HOVER */
-        .project-card:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-            transform: translateY(-10px) scale(1.02);
-        }
-
-        /* IMAGE - Adjusted for 1080x1350 (4:5 aspect ratio) */
-        .project-card img {
-            width: 100%;
-            height: 450px; /* 360px width * 1.25 = 450px height for 4:5 ratio */
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover img {
-            transform: scale(1.08);
-        }
-
-        /* CONTENT */
-        .project-card-content {
-            padding: 24px 26px 28px;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card-content h3 {
-            color: #ffffff;
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-
-        .project-card-content p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        /* CARD TAG */
-        .card-tag {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            z-index: 10;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .works-section {
-                padding: 40px 20px;
-            }
-
-            .section-title {
-                margin-bottom: 40px;
-                gap: 20px;
-            }
-
-            .section-title h2 {
-                font-size: 28px;
-                letter-spacing: 4px;
-            }
-
-            .slider-container {
-                padding: 20px 0;
-            }
-
-            .slider-track {
-                gap: 16px;
-            }
-
-            .project-card {
-                width: 300px;
-                min-width: 300px;
-            }
-
-            .project-card img {
-                height: 375px; 
-            }
-        }
-
-        @media (max-width: 480px) {
-            .project-card {
-                width: 280px;
-                min-width: 280px;
-            }
-
-            .project-card img {
-                height: 350px; 
-            }
-        }
-
-        /* SECTION */
-        .section {
-            margin-bottom: 80px;
-        }
-
-        /* SECTION TITLE */
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .section-title .line {
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(90deg, #9333ea 0%, #f97316 100%);
-        }
-
-        .section-title h2 {
-            color: #f97316;
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
-        /* TAGS GRID */
-        .tags-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-        }
-
-        /* TAG */
-        .tag {
-            padding: 12px 28px;
-            background: transparent;
-            border: 2px solid;
-            border-image: linear-gradient(90deg, #9333ea 0%, #f97316 100%) 1;
-            border-radius: 50px;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .section-title h2 {
-                font-size: 36px;
-            }
-
-            .tag {
-                font-size: 14px;
-                padding: 10px 24px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .section-title {
-                gap: 12px;
-                margin-bottom: 30px;
-            }
-
-            .tags-grid {
-                gap: 12px;
-            }
-
-            .tag {
-                font-size: 13px;
-                padding: 8px 20px;
-            }
-        }
-
-        .contact-section {
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-            margin: 100px auto 0;
-        }
-
-        /* PROFILE IMAGE */
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 100%;
-            margin: 0 auto 30px;
-            overflow: hidden;
-            border-image: linear-gradient(135deg, #9333ea 0%, #f97316 100%) 1;
-            position: relative;
-        }
-
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            border-radius: 50%;
-            padding: 3px;
-            background: linear-gradient(135deg, #9333ea 0%, #f97316 100%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* NAME */
-        .name {
-            color: #ffffff;
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        /* TAGLINE */
-        .tagline {
-            color: #f97316;
-            font-size: 48px;
-            font-weight: 700;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-
-        /* EMAIL BUTTON */
-        .email-button {
-            display: inline-block;
-            padding: 18px 40px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(200, 200, 200, 0.9) 100%);
-            color: #000000;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-bottom: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .email-button:hover {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(220, 220, 220, 1) 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-        }
-
-        /* SOCIAL LINKS */
-        .social-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 60px;
-        }
-
-        .social-link {
-            padding: 14px 40px;
-            background: transparent;
-            border: 2px solid #9333ea;
-            border-radius: 100px;
-            box-shadow: 0 6px 20px #f97316;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            transform: translateY(-2px);
-        }
-
-        /* COPYRIGHT */
-        .copyright {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .profile-image {
-                width: 120px;
-                height: 120px;
-            }
-
-            .name {
-                font-size: 28px;
-            }
-
-            .tagline {
-                font-size: 36px;
-            }
-
-            .email-button {
-                font-size: 16px;
-                padding: 16px 32px;
-            }
-
-            .social-links {
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-
-            .social-link {
-                font-size: 14px;
-                padding: 12px 32px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profile-image {
-                width: 100px;
-                height: 100px;
-            }
-
-            .name {
-                font-size: 24px;
-            }
-
-            .tagline {
-                font-size: 28px;
-                margin-bottom: 25px;
-            }
-
-            .email-button {
-                font-size: 14px;
-                padding: 14px 28px;
-            }
-
-            .social-link {
-                font-size: 13px;
-                padding: 10px 24px;
-            }
-        }
-    </style>
+    <title>Rica | Designer & Developer</title>
 </head>
 
 <body>
-    <div class="logo">
-        <img src="./images/MyLogo.svg" alt="Logo">
-        <span class="logo-text">RICA</span>
-    </div>
+    <header class="site-header">
+        <div class="header-container">
 
-    <div class="hero-container">
-        <h1>Designer & Developer</h1>
-        <h2>Developing digital experiences that drive results</h2>
-        <p>Designed solutions where artistry meets functionality to captivate audiences and achieve measurable impact.
-        </p>
+            <!-- Logo -->
+            <a href="#hero" class="logo">
+                <img src="./images/MyLogo.svg" alt="Rica Logo">
+                <span class="logo-text">RICA</span>
+            </a>
 
-        <div class="button-container">
-            <button class="btn-primary">
-                <img src="./images/portfolio.png" alt="icon" class="btn-icon">
-                Let's chat
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger for mobile -->
+            <button class="hamburger" aria-label="Open navigation menu">
+                ☰
             </button>
-            <button class="btn-secondary">View Projects</button>
+
         </div>
+    </header>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
 
-    </div>
+                <!-- Label above main heading -->
+                <p class="hero-label">Designer & Developer</p>
 
+                <!-- Main heading — most important statement -->
+                <h1 class="hero-title">
+                    Developing digital experiences
+                    that drive results
+                </h1>
 
-    <div class="second-section">
-        <div class="image-container">
-            <img src="./images/portfolio.png" alt="Section Image">
-        </div>
+                <!-- Supporting text -->
+                <p class="hero-description">
+                    Designed solutions where artistry meets functionality
+                    to captivate audiences and achieve measurable impact.
+                </p>
 
-        <div class="vertical-line"></div>
-
-        <div class="content-container">
-            <span>In a world of automation, authentic creativity risks is becoming obsolete.</span>
-            <p>Yet I believe technology and artistry aren't opposing forces. They're catalysts that amplify each other,
-                transforming good products into unforgettable experiences.
-            </p>
-            <p>I've lived at this intersection, merging robust code with imaginative design to build solutions that
-                inspire action and fuel measurable business growth. Explore my latest work below.</p>
-        </div>
-    </div>
-
-    <div class="works-section">
-        <div class="section-title">
-            <div class="line"></div>
-            <h2>Our Works</h2>
-            <div class="line"></div>
-        </div>
-
-        <div class="slider-container">
-            <div class="slider-track" id="sliderTrack">
-                <!-- First set of cards -->
-
-                <div class="project-card">
-                    <span class="card-tag">Web App</span>
-                    <img src="./images/assignproj.png"
-                        alt="assignproj">
-                    <div class="project-card-content">
-                        <h3>Assign Proj</h3>
-                        <p>A collaborative project management platform that enables professors to monitor student 
-                            participation, track individual contributions, and manage group assignments efficiently.</p>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <span class="card-tag">Websites</span>
-                    <img src="./images/easebus.png"
-                        alt="easebus">
-                    <div class="project-card-content">
-                        <h3>Easebus booking website</h3>
-                        <p>A user-friendly bus booking platform that allows customers to search routes, 
-                            view schedules, compare prices, and book tickets in real time.</p>
-                    </div>
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">
+                        Let's chat
+                    </a>
+                    <a href="#works" class="btn-secondary">
+                        View Projects
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <span class="card-tag">Branding</span>
-                    <img src="./images/logo design.png"
-                        alt="Branding">
-                    <div class="project-card-content">
-                        <h3>Rica branding</h3>
-                        <p>A branding project focused on creating a strong and consistent visual identity across digital and print platforms.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="card-tag">Websites</span>
-                    <img src="./images/mazi website.png"
-                        alt="Brand Identity">
-                    <div class="project-card-content">
-                        <h3>Mazimpaka Home LLC</h3>
-                        <p>A trusted home improvement company providing high-quality flooring and roofing services, including professional installation,
-                             repair, and maintenance for residential and commercial properties.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="card-tag">Flyers</span>
-                    <img src="./images/flyer.png"
-                        alt="flyer">
-                    <div class="project-card-content">
-                        <h3>Les DarMi Flyer</h3>
-                        <p>A vibrant shop offering a variety of fresh smoothies, juices, snacks, and healthy treats made with quality ingredients for
-                             on-the-go enjoyment.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="card-tag">Report design</span>
-                    <img src="./images/report design.png" alt="report design">
-                    <div class="project-card-content">
-                        <h3>Transforming Horticulture</h3>
-                        <p>A report focused on modern horticulture solutions, promoting sustainable farming practices, crop management, 
-                            and improved agricultural productivity through technology.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <span class="card-tag">Design</span>
-                    <img src="./images/menu.png"
-                        alt="menu">
-                    <div class="project-card-content">
-                        <h3>Les DarMi Menu</h3>
-                        <p>A clear and visually appealing menu design showcasing a variety of smoothies, fresh juices, snacks, and other 
-                            offerings to help customers easily explore available options.</p>
-                    </div>
-                </div>
-
-                
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="container">
-        <!-- SERVICES SECTION -->
-        <div class="section">
+
+        <section id="about" class="about-section">
+            <div class="about-container">
+
+                <!-- Image Side -->
+                <div class="about-image-wrapper">
+                    <img src="./images/portfolio.png" alt="Richard Ngabo — Designer and Developer">
+                </div>
+
+                <!-- Vertical Divider -->
+                <div class="about-divider" aria-hidden="true"></div>
+
+                <!-- Content Side -->
+                <div class="about-content">
+
+                    <h2 class="about-heading">About Me</h2>
+
+                    <blockquote class="about-quote">
+                        In a world of automation, authentic creativity
+                        risks becoming obsolete.
+                    </blockquote>
+
+                    <p class="about-text">
+                        Yet I believe technology and artistry aren't opposing
+                        forces. They're catalysts that amplify each other,
+                        transforming good products into unforgettable experiences.
+                    </p>
+
+                    <p class="about-text">
+                        I've lived at this intersection, merging robust code
+                        with imaginative design to build solutions that inspire
+                        action and fuel measurable business growth. Explore my
+                        latest work below.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="works" class="works-section">
+
+            <!-- Section Title -->
             <div class="section-title">
-                <div class="line"></div>
-                <h2>SERVICES</h2>
-                <div class="line"></div>
+                <div class="title-line"></div>
+                <h2>My Works</h2>
+                <div class="title-line"></div>
             </div>
 
-            <div class="tags-grid">
-                <div class="tag">Web app development</div>
-                <div class="tag">Mobile app development</div>
-                <div class="tag">Website development</div>
-                <div class="tag">UI/UX Design</div>
-                <div class="tag">Report Design</div>
-                <div class="tag">Flyers</div>
-                <div class="tag">Data entry & cleaning</div>
-                <div class="tag">Photo Editing</div>
+            <!-- Slider -->
+            <div class="slider-container" id="sliderContainer">
+                <div class="slider-track" id="sliderTrack">
+
+                    <!-- ── First Set of Cards ── -->
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Web App</span>
+                            <img src="./images/assignproj.png"
+                                alt="Assign Proj — collaborative project management platform" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Assign Proj</h3>
+                            <p>A collaborative project management platform that enables
+                                professors to monitor student participation, track individual
+                                contributions, and manage group assignments efficiently.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Website</span>
+                            <img src="./images/easebus.png" alt="Easebus — online bus booking and ticketing platform"
+                                loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Easebus Booking Website</h3>
+                            <p>A user-friendly bus booking platform that allows customers
+                                to search routes, view schedules, compare prices, and book
+                                tickets in real time.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Branding</span>
+                            <img src="./images/logo design.png" alt="Rica Branding — visual identity design project"
+                                loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Rica Branding</h3>
+                            <p>A branding project focused on creating a strong and
+                                consistent visual identity across digital and print platforms.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Website</span>
+                            <img src="./images/mazi website.png"
+                                alt="Mazimpaka Home LLC — flooring and roofing services website" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Mazimpaka Home LLC</h3>
+                            <p>A trusted home improvement company providing high-quality
+                                flooring and roofing services, including professional installation,
+                                repair, and maintenance.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Flyer</span>
+                            <img src="./images/flyer.png"
+                                alt="Les DarMi Flyer — smoothie and snacks shop promotional flyer" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Les DarMi Flyer</h3>
+                            <p>A vibrant shop offering a variety of fresh smoothies, juices,
+                                snacks, and healthy treats made with quality ingredients for
+                                on-the-go enjoyment.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Report Design</span>
+                            <img src="./images/report design.png"
+                                alt="Transforming Horticulture — agricultural report design" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Transforming Horticulture</h3>
+                            <p>A report focused on modern horticulture solutions, promoting
+                                sustainable farming practices, crop management, and improved
+                                agricultural productivity through technology.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Design</span>
+                            <img src="./images/menu.png" alt="Les DarMi Menu — smoothie and juice menu design"
+                                loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Les DarMi Menu</h3>
+                            <p>A clear and visually appealing menu design showcasing a
+                                variety of smoothies, fresh juices, snacks, and other offerings
+                                to help customers easily explore available options.</p>
+                        </div>
+                    </article>
+
+                    <!-- ── Duplicated Set for Infinite Scroll ── -->
+
+                    <article class="project-card" aria-hidden="true">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Web App</span>
+                            <img src="./images/assignproj.png" alt="" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Assign Proj</h3>
+                            <p>A collaborative project management platform that enables
+                                professors to monitor student participation, track individual
+                                contributions, and manage group assignments efficiently.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-hidden="true">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Website</span>
+                            <img src="./images/easebus.png" alt="" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Easebus Booking Website</h3>
+                            <p>A user-friendly bus booking platform that allows customers
+                                to search routes, view schedules, compare prices, and book
+                                tickets in real time.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-hidden="true">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Branding</span>
+                            <img src="./images/logo design.png" alt="" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Rica Branding</h3>
+                            <p>A branding project focused on creating a strong and
+                                consistent visual identity across digital and print platforms.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-hidden="true">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Website</span>
+                            <img src="./images/mazi website.png" alt="" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Mazimpaka Home LLC</h3>
+                            <p>A trusted home improvement company providing high-quality
+                                flooring and roofing services, including professional installation,
+                                repair, and maintenance.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-hidden="true">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Flyer</span>
+                            <img src="./images/flyer.png" alt="" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Les DarMi Flyer</h3>
+                            <p>A vibrant shop offering a variety of fresh smoothies, juices,
+                                snacks, and healthy treats made with quality ingredients.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-hidden="true">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Report Design</span>
+                            <img src="./images/report design.png" alt="" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Transforming Horticulture</h3>
+                            <p>A report focused on modern horticulture solutions, promoting
+                                sustainable farming practices and improved productivity.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" aria-hidden="true">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Design</span>
+                            <img src="./images/menu.png" alt="" loading="lazy">
+                        </div>
+                        <div class="project-card-content">
+                            <h3>Les DarMi Menu</h3>
+                            <p>A clear and visually appealing menu design showcasing
+                                smoothies, fresh juices, snacks, and other offerings.</p>
+                        </div>
+                    </article>
+
+                </div>
             </div>
-        </div>
 
-        <!-- TOOLS SECTION -->
-        <div class="section">
-            <div class="section-title">
-                <div class="line"></div>
-                <h2>Tools</h2>
-                <div class="line"></div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="services-container">
+
+                <!-- Section Title -->
+                <div class="section-title">
+                    <div class="title-line"></div>
+                    <h2>Services</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <!-- What I Do -->
+                <div class="services-block">
+                    <h3 class="services-subtitle">What I Do</h3>
+                    <ul class="tags-grid" role="list">
+                        <li class="tag">Web App Development</li>
+                        <li class="tag">Mobile App Development</li>
+                        <li class="tag">Website Development</li>
+                        <li class="tag">UI/UX Design</li>
+                        <li class="tag">Report Design</li>
+                        <li class="tag">Flyers</li>
+                        <li class="tag">Data Entry &amp; Cleaning</li>
+                        <li class="tag">Photo Editing</li>
+                    </ul>
+                </div>
+
+                <!-- Divider -->
+                <div class="services-divider" aria-hidden="true"></div>
+
+                <!-- Tools I Use -->
+                <div class="services-block">
+                    <h3 class="services-subtitle">Tools I Use</h3>
+                    <ul class="tags-grid" role="list">
+                        <li class="tag">Figma</li>
+                        <li class="tag">Adobe Photoshop</li>
+                        <li class="tag">Node JS</li>
+                        <li class="tag">Adobe InDesign</li>
+                        <li class="tag">Python</li>
+                        <li class="tag">React</li>
+                        <li class="tag">Android Studio</li>
+                        <li class="tag">Adobe Illustrator</li>
+                        <li class="tag">and many more...</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+
+                <!-- Profile Image -->
+                <div class="contact-profile-image">
+                    <img src="./images/portfolio.png" alt="Richard Ngabo — Designer and Developer">
+                </div>
+
+                <!-- Name -->
+                <p class="contact-name">Richard Ngabo</p>
+
+                <!-- Tagline -->
+                <h2 class="contact-tagline">Let's work together!</h2>
+
+                <!-- Email Button -->
+                <a href="mailto:ngarica1603@gmail.com" class="email-button"
+                    aria-label="Send an email to Richard Ngabo at ngarica1603@gmail.com">
+                    Email me at: ngarica1603@gmail.com
+                </a>
+
+                <!-- Social Links -->
+                <ul class="social-links" role="list">
+                    <li>
+                        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Visit Rica on X Twitter">
+                            X (Twitter)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Visit Rica on LinkedIn">
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Visit Rica on Instagram">
+                            Instagram
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Divider -->
+            <div class="footer-divider" aria-hidden="true"></div>
+
+            <!-- Footer Content -->
+            <div class="footer-content">
+
+                <!-- Logo -->
+                <a href="#hero" class="footer-logo">
+                    <img src="./images/MyLogo.svg" alt="Rica Logo">
+                    <span>RICA</span>
+                </a>
+
+                <!-- Copyright -->
+                <p class="footer-copyright">
+                    &copy; 2026 Richard Ngabo. All rights reserved.
+                </p>
+
+                <!-- Credit -->
+                <p class="footer-credit">
+                    Designed &amp; Developed by <span>Rica</span>
+                </p>
+
             </div>
 
-            <div class="tags-grid">
-                <div class="tag">Figma</div>
-                <div class="tag">Adobe Photoshop</div>
-                <div class="tag">Node JS</div>
-                <div class="tag">Adobe InDesign</div>
-                <div class="tag">Python</div>
-                <div class="tag">React</div>
-                <div class="tag">Android Studio</div>
-                <div class="tag">Adobe Illustrator</div>
-                <div class="tag">and many more...</div>
-            </div>
         </div>
-    </div>
+    </footer>
 
-
-    <div class="contact-section">
-        <!-- PROFILE IMAGE -->
-        <div class="profile-image">
-            <img src="./images/portfolio.png" alt="Richard Ngabo">
-        </div>
-
-        <!-- NAME -->
-        <h2 class="name">Richard Ngabo</h2>
-
-        <!-- TAGLINE -->
-        <h1 class="tagline">Let's work together!</h1>
-
-        <!-- EMAIL -->
-        <a href="mailto:ngarica1603@gmail.com" class="email-button">Email me at: ngarica1603@gmail.com</a>
-
-        <!-- SOCIAL LINKS -->
-        <div class="social-links">
-            <a href="https://x.com/Rica_editz" target="_blank" class="social-link">X(Twitter)</a>
-            <a href="https://www.linkedin.com/in/richard-ngabo/" target="_blank" class="social-link">LinkedIn</a>
-            <a href="https://www.instagram.com/rica_editz/" target="_blank" class="social-link">Instagram</a>
-        </div>
-
-        <!-- COPYRIGHT -->
-        <p class="copyright">© Copyright 2026, All rights reserved.</p>
-    </div>
 
     <script>
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.main-nav');
+
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+        });
+
+        // Close nav when a link is clicked
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('open');
+            });
+        });
         const sliderContainer = document.getElementById('sliderContainer');
         const sliderTrack = document.getElementById('sliderTrack');
 
@@ -877,7 +545,7 @@
                 sliderTrack.style.cursor = 'grab';
 
                 // Snap to nearest card
-                const cardWidth = sliderTrack.children[0].offsetWidth + 20; 
+                const cardWidth = sliderTrack.children[0].offsetWidth + 20;
                 const movedBy = currentTranslate;
                 const snapIndex = Math.round(movedBy / cardWidth);
 
