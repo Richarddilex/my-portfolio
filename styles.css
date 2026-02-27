@@ -436,6 +436,7 @@ body {
 }
 
 
+
 /* ── Works Section ── */
 .works-section {
     width: 100%;
@@ -626,6 +627,177 @@ body {
         height: 350px;
     }
 }
+
+/* ── Experience Section ── */
+.experience-section {
+    width: 100%;
+    background-color: black;
+    padding: 80px 40px;
+}
+
+.experience-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── Experience Grid ── */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* ── Column Title ── */
+.experience-column-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #B175FF;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.column-icon {
+    font-size: 20px;
+}
+
+/* ── Experience Card ── */
+.experience-card {
+    background: rgba(208, 18, 18, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    /* Subtle left border accent */
+    border-left: 3px solid transparent;
+    
+    border-left: 3px solid transparent;
+}
+
+.experience-card:hover {
+    
+    transform: translateY(-15px);
+}
+
+/* ── Card Header ── */
+.experience-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* ── Role Title ── */
+.experience-role {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 4px 0;
+}
+
+/* ── Place ── */
+.experience-place {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #B175FF;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ── Date Badge ── */
+.experience-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ── Description ── */
+.experience-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.7;
+    margin: 0 0 12px 0;
+}
+
+/* ── Experience List ── */
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.experience-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+    position: relative;
+}
+
+.experience-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #B175FF;
+    font-size: 12px;
+}
+
+/* ── Verified Badge ── */
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+
+
+
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-section {
+        padding: 60px 20px;
+    }
+
+    .experience-card-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
 
 /* ── Services Section ── */
 .services-section {
@@ -913,13 +1085,11 @@ body {
 .footer-divider {
     width: 100%;
     height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        #B175FF,
-        #FF8210,
-        transparent
-    );
+    background: linear-gradient(to right,
+            transparent,
+            #B175FF,
+            #FF8210,
+            transparent);
 }
 
 /* ── Footer Content ── */
@@ -1002,3 +1172,6 @@ body {
         text-align: center;
     }
 }
+
+
+
