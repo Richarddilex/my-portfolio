@@ -10,7 +10,8 @@
     <meta name="description"
         content="Richard Ngabo is a Software Engineer based in Rwanda specializing in full-stack web development, desktop applications, and AI/RAG systems.">
     <meta name="author" content="Richard Ngabo">
-    <meta name="keywords" content="Richard Ngabo, Software Engineer Rwanda, Full-Stack Developer, RAG Systems, AI Engineer, Python Developer, React Developer, Web Development Rwanda, Software Engineer Portfolio">
+    <meta name="keywords"
+        content="Richard Ngabo, Software Engineer Rwanda, Full-Stack Developer, RAG Systems, AI Engineer, Python Developer, React Developer, Web Development Rwanda, Software Engineer Portfolio">
 
 
     <meta property="og:title" content="Richard Ngabo | Software Engineer — Full-Stack & AI/RAG Systems">
@@ -90,7 +91,8 @@
 
                 <!-- Supporting text -->
                 <p class="hero-description">
-                    I design and build full-stack, AI-integrated products, from local RAG systems to production-ready web and desktop applications.
+                    I design and build full-stack, AI-integrated products, from local RAG systems to production-ready
+                    web and desktop applications.
                 </p>
 
                 <!-- CTA Buttons -->
@@ -128,11 +130,16 @@
                     </blockquote>
 
                     <p class="about-text">
-                        I'm a Software Engineer who builds full-stack, AI-integrated systems, web, desktop, and everything connecting them. I write code that's meant to survive contact with real users: tested against edge cases, validated for data integrity, and built to keep working long after launch day.
+                        I'm a Software Engineer who builds full-stack, AI-integrated systems, web, desktop, and
+                        everything connecting them. I write code that's meant to survive contact with real users: tested
+                        against edge cases, validated for data integrity, and built to keep working long after launch
+                        day.
                     </p>
 
                     <p class="about-text">
-                        A solution isn't done when it looks good, it's done when it looks good and holds up under load, bad input, and the messy conditions real software has to live in. That's the standard I hold every project to, from design through deployment. Explore my latest work below.
+                        A solution isn't done when it looks good, it's done when it looks good and holds up under load,
+                        bad input, and the messy conditions real software has to live in. That's the standard I hold
+                        every project to, from design through deployment. Explore my latest work below.
                     </p>
 
                 </div>
@@ -151,202 +158,146 @@
                 <div class="title-line"></div>
             </div>
 
-            <!-- Slider -->
-            <div class="slider-container" id="sliderContainer">
-                <div class="slider-track" id="sliderTrack">
+            <!-- Projects Grid -->
+            <div class="works-grid">
 
-                    <!-- ── First Set of Cards ── -->
-
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Web App</span>
-                            <img src="./images/assignproj.png"
-                                alt="Assign Proj — collaborative project management platform" loading="lazy">
+                <article class="project-card">
+                    <div class="card-media-wrapper">
+                        <span class="card-tag">AI / RAG</span>
+                        <video class="card-video" muted loop playsinline preload="metadata">
+                            <source src="./videos/localrags.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-card-content">
+                        <div class="card-title-row">
+                            <h3>LocalRAG Docs</h3>
+                            <a href="https://github.com/Ricardo-Tesla/LocalRAG-Docs" target="_blank"
+                                rel="noopener noreferrer" class="card-link">GitHub →</a>
                         </div>
-                        <div class="project-card-content">
+                        <p class="card-summary">A fully local, privacy-first RAG system for technical document
+                            Q&A. Users upload PDFs and ask natural-language questions, the system retrieves
+                            relevant passages and generates grounded, source-attributed answers entirely
+                            on-device, with no data sent to third-party APIs.</p>
+                        <p class="card-challenge"><strong>The challenge:</strong> keeping every answer verifiable
+                            and grounded — not just generating a plausible response, but returning the exact
+                            source passages, page numbers, and relevance scores behind it, using a multi-stage
+                            retrieval pipeline with zero cloud dependency.</p>
+                        <div class="card-tech">
+                            <span>Python</span><span>FastAPI</span><span>ChromaDB</span><span>Ollama</span><span>Docker</span>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-media-wrapper">
+                        <span class="card-tag">Desktop App</span>
+                        <video class="card-video" muted loop playsinline preload="metadata">
+                            <source src="./videos/biztrack.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-card-content">
+                        <div class="card-title-row">
+                            <h3>Rica BizTrack</h3>
+                            <a href="https://github.com/Ricardo-Tesla/rica-bztrack" target="_blank"
+                                rel="noopener noreferrer" class="card-link">GitHub →</a>
+                        </div>
+                        <p class="card-summary">An offline desktop business management app for small businesses,
+                            inventory, sales, expenses, and profit/loss reporting, built to work without a monthly
+                            subscription, an internet connection, or an accountant.</p>
+                        <p class="card-challenge"><strong>The challenge:</strong> guaranteeing financial data
+                            integrity with zero server to validate against, while keeping the entire app under a
+                            6MB installer for businesses in areas with unreliable connectivity.</p>
+                        <div class="card-tech">
+                            <span>Rust</span><span>Tauri</span><span>React</span><span>SQLite</span>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-media-wrapper">
+                        <span class="card-tag">Web App</span>
+                        <video class="card-video" muted loop playsinline preload="metadata">
+                            <source src="./videos/assignproj.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-card-content">
+                        <div class="card-title-row">
                             <h3>Assign Proj</h3>
-                            <p>A collaborative project management platform that enables
-                                professors to monitor student participation, track individual
-                                contributions, and manage group assignments efficiently.</p>
+                            <a href="https://github.com/Ricardo-Tesla/AssignProj" target="_blank"
+                                rel="noopener noreferrer" class="card-link">GitHub →</a>
                         </div>
-                    </article>
+                        <p class="card-summary">A project management platform for academic group work, students
+                            collaborate on tasks, submit assignments, and receive notifications, while lecturers
+                            track each group's progress and communicate directly within the platform.</p>
+                        <p class="card-challenge"><strong>The challenge:</strong> designing a role-based system
+                            that gives lecturers accurate, real-time visibility into individual student
+                            contributions within a group, without disrupting the students' own collaborative
+                            workflow.</p>
+                        <div class="card-tech">
+                            <span>React</span><span>Node.js</span>
+                        </div>
+                    </div>
+                </article>
 
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Website</span>
-                            <img src="./images/easebus.png" alt="Easebus — online bus booking and ticketing platform"
-                                loading="lazy">
-                        </div>
-                        <div class="project-card-content">
+                <article class="project-card">
+                    <div class="card-media-wrapper">
+                        <span class="card-tag">Website</span>
+                        <video class="card-video" muted loop playsinline preload="metadata">
+                            <source src="./videos/easebus.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-card-content">
+                        <div class="card-title-row">
                             <h3>Easebus Booking Website</h3>
-                            <p>A user-friendly bus booking platform that allows customers
-                                to search routes, view schedules, compare prices, and book
-                                tickets in real time.</p>
+                            <a href="https://github.com/Ricardo-Tesla/Bus-Booking-and-Reservation-web-app"
+                                target="_blank" rel="noopener noreferrer" class="card-link">GitHub →</a>
                         </div>
-                    </article>
+                        <p class="card-summary">A bus reservation system built for Kenya's leading bus charter
+                            services, handling seat selection, route scheduling, dynamic pricing, and ticket
+                            verification across the booking lifecycle.</p>
+                        <p class="card-challenge"><strong>The challenge:</strong> keeping real-time seat
+                            availability accurate across VIP and regular pricing tiers, while generating
+                            QR-verifiable tickets for check-in and preventing double-bookings on concurrent
+                            reservations.</p>
+                        <div class="card-tech">
+                            <span>Node.js</span><span>Express.js</span><span>Express
+                                Handlebars</span><span>JavaScript</span><span>Bootstrap 5</span>
+                        </div>
+                    </div>
+                </article>
 
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Branding</span>
-                            <img src="./images/logo design.png" alt="Rica Branding — visual identity design project"
-                                loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Rica Branding</h3>
-                            <p>A branding project focused on creating a strong and
-                                consistent visual identity across digital and print platforms.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Website</span>
-                            <img src="./images/mazi website.png"
-                                alt="Mazimpaka Home LLC — flooring and roofing services website" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
+                <article class="project-card">
+                    <div class="card-media-wrapper">
+                        <span class="card-tag">Website</span>
+                        <video class="card-video" muted loop playsinline preload="metadata">
+                            <source src="./videos/mazi.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-card-content">
+                        <div class="card-title-row">
                             <h3>Mazimpaka Home LLC</h3>
-                            <p>A trusted home improvement company providing high-quality
-                                flooring and roofing services, including professional installation,
-                                repair, and maintenance.</p>
+                            <a href="https://mazimpakahomellc.com/" target="_blank" rel="noopener noreferrer"
+                                class="card-link">Live Site →</a>
                         </div>
-                    </article>
+                        <p class="card-summary">A responsive marketing website for a U.S.-based home services
+                            company specializing in vinyl flooring and residential roofing, built from scratch
+                            with plain HTML, CSS, and JavaScript.</p>
+                        <p class="card-challenge"><strong>The challenge:</strong> designing a clear conversion
+                            path for a non-technical client, structuring service pages, a process explainer,
+                            and a lead-generation contact form to turn visitors into estimate requests, without
+                            relying on a framework or site builder.</p>
+                        <div class="card-tech">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>SEO</span>
+                        </div>
+                    </div>
+                </article>
 
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Flyer</span>
-                            <img src="./images/flyer.png"
-                                alt="Les DarMi Flyer — smoothie and snacks shop promotional flyer" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Les DarMi Flyer</h3>
-                            <p>A vibrant shop offering a variety of fresh smoothies, juices,
-                                snacks, and healthy treats made with quality ingredients for
-                                on-the-go enjoyment.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Report Design</span>
-                            <img src="./images/report design.png"
-                                alt="Transforming Horticulture — agricultural report design" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Transforming Horticulture</h3>
-                            <p>A report focused on modern horticulture solutions, promoting
-                                sustainable farming practices, crop management, and improved
-                                agricultural productivity through technology.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Design</span>
-                            <img src="./images/menu.png" alt="Les DarMi Menu — smoothie and juice menu design"
-                                loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Les DarMi Menu</h3>
-                            <p>A clear and visually appealing menu design showcasing a
-                                variety of smoothies, fresh juices, snacks, and other offerings
-                                to help customers easily explore available options.</p>
-                        </div>
-                    </article>
-
-                    <!-- ── Duplicated Set for Infinite Scroll ── -->
-
-                    <article class="project-card" aria-hidden="true">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Web App</span>
-                            <img src="./images/assignproj.png" alt="" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Assign Proj</h3>
-                            <p>A collaborative project management platform that enables
-                                professors to monitor student participation, track individual
-                                contributions, and manage group assignments efficiently.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card" aria-hidden="true">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Website</span>
-                            <img src="./images/easebus.png" alt="" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Easebus Booking Website</h3>
-                            <p>A user-friendly bus booking platform that allows customers
-                                to search routes, view schedules, compare prices, and book
-                                tickets in real time.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card" aria-hidden="true">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Branding</span>
-                            <img src="./images/logo design.png" alt="" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Rica Branding</h3>
-                            <p>A branding project focused on creating a strong and
-                                consistent visual identity across digital and print platforms.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card" aria-hidden="true">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Website</span>
-                            <img src="./images/mazi website.png" alt="" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Mazimpaka Home LLC</h3>
-                            <p>A trusted home improvement company providing high-quality
-                                flooring and roofing services, including professional installation,
-                                repair, and maintenance.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card" aria-hidden="true">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Flyer</span>
-                            <img src="./images/flyer.png" alt="" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Les DarMi Flyer</h3>
-                            <p>A vibrant shop offering a variety of fresh smoothies, juices,
-                                snacks, and healthy treats made with quality ingredients.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card" aria-hidden="true">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Report Design</span>
-                            <img src="./images/report design.png" alt="" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Transforming Horticulture</h3>
-                            <p>A report focused on modern horticulture solutions, promoting
-                                sustainable farming practices and improved productivity.</p>
-                        </div>
-                    </article>
-
-                    <article class="project-card" aria-hidden="true">
-                        <div class="card-image-wrapper">
-                            <span class="card-tag">Design</span>
-                            <img src="./images/menu.png" alt="" loading="lazy">
-                        </div>
-                        <div class="project-card-content">
-                            <h3>Les DarMi Menu</h3>
-                            <p>A clear and visually appealing menu design showcasing
-                                smoothies, fresh juices, snacks, and other offerings.</p>
-                        </div>
-                    </article>
-
-                </div>
             </div>
 
         </section>
+
 
         <section id="experience" class="experience-section">
             <div class="experience-container">
@@ -640,14 +591,14 @@
 
                 <!-- Social Links -->
                 <ul class="social-links" role="list">
-                    
+
                     <li>
-                        <a href="https://www.linkedin.com/in/richard-ngabo/?isSelfProfile=true" target="_blank" rel="noopener noreferrer"
-                            class="social-link" aria-label="Visit Rica on LinkedIn">
+                        <a href="https://www.linkedin.com/in/richard-ngabo/?isSelfProfile=true" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="Visit Rica on LinkedIn">
                             LinkedIn
                         </a>
                     </li>
-                    
+
                 </ul>
 
             </div>
@@ -687,127 +638,67 @@
     <script>
 
         // ── Hamburger menu toggle ──
-const hamburger = document.querySelector('.hamburger');
-const mainNav = document.querySelector('.main-nav');
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.main-nav');
 
-hamburger.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
-});
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('open');
+        });
 
-// Close nav when a link is clicked
-document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-    });
-});
-
-// ── Smooth scroll for all anchor links ──
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-
-        if (target) {
-            const headerHeight = document.querySelector('.site-header').offsetHeight;
-            const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
+        // Close nav when a link is clicked
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('open');
             });
-        }
-    });
-});
+        });
 
-// ── Slider ──
-const sliderContainer = document.getElementById('sliderContainer');
-const sliderTrack = document.getElementById('sliderTrack');
+        // ── Smooth scroll for all anchor links ──
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-const isMobile = window.matchMedia('(max-width: 768px)').matches;
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
 
-if (!isMobile) {
-    sliderContainer.addEventListener('mouseenter', () => {
-        sliderTrack.classList.add('paused');
-    });
+                if (target) {
+                    const headerHeight = document.querySelector('.site-header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
 
-    sliderContainer.addEventListener('mouseleave', () => {
-        sliderTrack.classList.remove('paused');
-    });
-}
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-if (isMobile) {
-    let startX = 0;
-    let currentX = 0;
-    let isDragging = false;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    let animationID = 0;
+        // ── Works section: play video on hover, pause on mouse leave ──
+        document.querySelectorAll('.works-section .project-card').forEach(card => {
+            const video = card.querySelector('.card-video');
+            if (!video) return; // skip cards that use an image instead of video
 
-    sliderTrack.addEventListener('touchstart', touchStart);
-    sliderTrack.addEventListener('touchmove', touchMove);
-    sliderTrack.addEventListener('touchend', touchEnd);
+            card.addEventListener('mouseenter', () => {
+                video.currentTime = 0;
+                video.play().catch(() => { });
+            });
 
-    sliderTrack.addEventListener('mousedown', touchStart);
-    sliderTrack.addEventListener('mousemove', touchMove);
-    sliderTrack.addEventListener('mouseup', touchEnd);
-    sliderTrack.addEventListener('mouseleave', touchEnd);
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
 
-    function touchStart(event) {
-        if (!isMobile && event.type === 'mousedown') return;
-        isDragging = true;
-        startX = getPositionX(event);
-        animationID = requestAnimationFrame(animation);
-        sliderTrack.style.cursor = 'grabbing';
-    }
+            // ── Touch devices: tap to toggle play/pause ──
+            card.addEventListener('touchstart', () => {
+                if (video.paused) {
+                    video.play().catch(() => { });
+                } else {
+                    video.pause();
+                }
+            }, { passive: true });
+        });
 
-    function touchMove(event) {
-        if (!isDragging) return;
-        currentX = getPositionX(event);
-        currentTranslate = prevTranslate + currentX - startX;
-    }
-
-    function touchEnd() {
-        isDragging = false;
-        cancelAnimationFrame(animationID);
-        prevTranslate = currentTranslate;
-        sliderTrack.style.cursor = 'grab';
-
-        const cardWidth = sliderTrack.children[0].offsetWidth + 20;
-        const snapIndex = Math.round(currentTranslate / cardWidth);
-        currentTranslate = snapIndex * cardWidth;
-        prevTranslate = currentTranslate;
-
-        const maxTranslate = 0;
-        const minTranslate = -(cardWidth * (sliderTrack.children.length - 1));
-        if (currentTranslate > maxTranslate) currentTranslate = maxTranslate;
-        if (currentTranslate < minTranslate) currentTranslate = minTranslate;
-
-        prevTranslate = currentTranslate;
-        setSliderPosition();
-    }
-
-    function getPositionX(event) {
-        return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-    }
-
-    function animation() {
-        setSliderPosition();
-        if (isDragging) requestAnimationFrame(animation);
-    }
-
-    function setSliderPosition() {
-        sliderTrack.style.transform = `translateX(${currentTranslate}px)`;
-    }
-
-    sliderTrack.style.cursor = 'grab';
-}
-
-window.addEventListener('resize', () => {
-    location.reload();
-});
     </script>
+
 </body>
 
 </html>
